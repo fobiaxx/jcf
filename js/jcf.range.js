@@ -50,7 +50,7 @@ jcf.addModule(function($) {
 			this.createdHandleCount = 0;
 			this.activeDragHandleIndex = 0;
 			this.isMultiple = this.realElement.prop('multiple') || typeof this.realElement.attr('multiple') === 'string';
-			this.values = this.isMultiple ? this.realElement.attr('value').split(',') : [this.realElement.val()];
+			this.values = this.isMultiple ? this.realElement[0].getAttribute('value').split(',') : [this.realElement.val()];
 			this.handleCount = this.isMultiple ? this.values.length : 1;
 
 			// create range display
